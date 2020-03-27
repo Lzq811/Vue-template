@@ -7,11 +7,20 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-
+import { reqHeatMap } from '../config/api/index.js'
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  mounted () {
+    this.testAjax()
+  },
+  methods: {
+    testAjax: async () => {
+      const result = await reqHeatMap()
+      console.log(result)
+    }
   }
 }
 </script>
