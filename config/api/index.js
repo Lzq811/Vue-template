@@ -3,7 +3,8 @@
 此处不用 default 暴露，每个函数的返回值都是 promise
 */
 import ajax from './ajax.js'
-const BASE = 'http://47.107.217.109:8080'
+// const BASE = 'http://47.107.217.109:8080'
+const BASE = process.env.VUE_APP_URL
 
 // 代理解决 跨域， 404 等问题 在 package.json 文件下面写上，但是只能用在本地环境  "proxy": "http://后台地址"
 
